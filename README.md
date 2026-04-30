@@ -1,5 +1,5 @@
 # PyOrganizer: File Organizer 📁
-A simple and efficient automation script to keep your Downloads folder organized!
+A simple automation script to keep your Downloads folder organized!
 
 ## Functionality
 The script scans the Downloads folder and moves files into specific subfolders based on their extensions. If a destination folder does not exist, the operating system handles the flow (it is recommended to ensure the folders exist or use `os.makedirs`).
