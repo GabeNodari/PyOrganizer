@@ -1,69 +1,62 @@
 # PyOrganizer: File Organizer 📁
-Um script de automação simples e eficiente para manter sua pasta de Downloads organizada!
+A simple and efficient automation script to keep your Downloads folder organized!
 
-<hr>
-
-## Funcionamento
-O script varre a pasta de Downloads e move os arquivos para subpastas específicas
-com base na extensão do arquivo. Se a pasta de destino não existir, o sistema operacional se
-encarrega de gerenciar o fluxo (recomenda-se garantir que as pastas existam ou utilizar
-os.makedirs).
+## Functionality
+The script scans the Downloads folder and moves files into specific subfolders based on their extensions. If a destination folder does not exist, the operating system handles the flow (it is recommended to ensure the folders exist or use `os.makedirs`).
 
 As categorias atuais são:
-- 📄 Documentos: .pdf, .docx, .txt
-- 🖼️ Imagens: .jpg, .png, .jpeg
-- ⚙️ Instaladores: .exe, .msi
-- 📦 Compactados: .zip, .rar, .7z
+- 📄 Documents: .pdf, .docx, .txt
+- 🖼️ Images: .jpg, .png, .jpeg
+- ⚙️ Installer: .exe, .msi
+- 📦 Archives/Compressed: .zip, .rar, .7z
 
-## Requisitos
+## Requirements
 
-- Python 3.8 ou superior
+- Python 3.8+
 
-## Executável e Automação
+## Automation
 ## 🪟 Windows: 
-Para facilitar o uso e economizar recursos do sistema, este projeto pode ser convertido em um
-executável (.exe) utilizando o PyInstaller e, posteriormente, agendado via Task Scheduler/Agendador de Tarefas.
+To facilitate use and save system resources, this project can be converted into an executable (.exe) using PyInstaller and subsequently scheduled via the Task Scheduler.
 
-#### Como gerar o executável:
-1. Clone o repositório:
+#### How to generate the .exe:
+1. Clone the repository:
 ```
 git clone https://github.com/GabeNodari/PyOrganizer.git
 cd PyOrganizer
 ```
-2. Instale o PyInstaller:
+2. Install PyInstaller:
 ```
 python -m pip install pyinstaller
 ```
-3. Gere o arquivo:
+3. Generate the file:
 ```
 pyinstaller --onefile --noconsole app.py
 ```
 
-O arquivo final estará na pasta dist. O uso da flag --noconsole permite que o script rode de
-forma invisível, o que é ideal para integração no dia a dia.
+The final file will be located in the `dist` folder. Using the `--noconsole` flag allows the script to run invisibly, which is ideal for seamless daily integration.
 
 ## 🐧 Linux:
-No Linux, a automação é feita de forma nativa utilizando o Cron.
+On Linux, automation is handled natively using Cron.
 
-#### Como configurar o agendamento (Cron):
-1. Clone o repositório:
+#### How to configure the schedule (Cron):
+1. Clone the repository:
 ```
 git clone https://github.com/GabeNodari/PyOrganizer.git
 cd PyOrganizer
 ```
-2. Verique o local do Python: 
+2. Verify the Python location:
 ```
 which python3
 ```
-3. Verique o local do script.
-4. Abra o terminal e acesse o editor de tarefas: 
+3. Verify the script location.
+4. Open the terminal and access the task editor: 
 ```
 crontab -e
 ```
-5. Adicione uma linha ao final do arquivo para definir quando o script deve rodar.
+5. Add a line at the end of the file to define when the script should run.
 
-Exemplo para rodar todo dia, de hora em hora:
+Example to run every hour of every day:
 
 ```
-00 * * * * /usr/bin/python3 /caminho/completo/para/app.py`
+00 * * * * /usr/bin/python3 /full/path/to/app.py
 ```
