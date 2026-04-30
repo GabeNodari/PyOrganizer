@@ -4,14 +4,13 @@ A simple automation script to keep your Downloads folder organized!
 ## Functionality
 The script scans the Downloads folder and moves files into specific subfolders based on their extensions. If a destination folder does not exist, the operating system handles the flow (it is recommended to ensure the folders exist or use `os.makedirs`).
 
-As categorias atuais são:
+Current Categories:
 - 📄 Documents: .pdf, .docx, .txt
 - 🖼️ Images: .jpg, .png, .jpeg
 - ⚙️ Installer: .exe, .msi
 - 📦 Archives/Compressed: .zip, .rar, .7z
 
 ## Requirements
-
 - Python 3.8+
 
 ## Automation
