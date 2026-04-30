@@ -25,8 +25,19 @@ Para facilitar o uso e economizar recursos do sistema, este projeto pode ser con
 executável (.exe) utilizando o PyInstaller e, posteriormente, agendado via Task Scheduler/Agendador de Tarefas.
 
 #### Como gerar o executável:
-1. Instale o PyInstaller: `python -m pip install pyinstaller`
-2. Gere o arquivo: `pyinstaller --onefile --noconsole app.py`
+1. Clone o repositório:
+```
+git clone https://github.com/GabeNodari/PyOrganizer.git
+cd PyOrganizer
+```
+2. Instale o PyInstaller:
+```
+python -m pip install pyinstaller
+```
+3. Gere o arquivo:
+```
+pyinstaller --onefile --noconsole app.py
+```
 
 O arquivo final estará na pasta dist. O uso da flag --noconsole permite que o script rode de
 forma invisível, o que é ideal para integração no dia a dia.
@@ -35,10 +46,24 @@ forma invisível, o que é ideal para integração no dia a dia.
 No Linux, a automação é feita de forma nativa utilizando o Cron.
 
 #### Como configurar o agendamento (Cron):
-1. Abra o terminal e acesse o editor de tarefas: `crontab -e`
-2. Adicione uma linha ao final do arquivo para definir quando o script deve rodar.
+1. Clone o repositório:
+```
+git clone https://github.com/GabeNodari/PyOrganizer.git
+cd PyOrganizer
+```
+2. Verique o local do Python: 
+```
+which python3
+```
+3. Verique o local do script.
+4. Abra o terminal e acesse o editor de tarefas: 
+```
+crontab -e
+```
+5. Adicione uma linha ao final do arquivo para definir quando o script deve rodar.
 
 Exemplo para rodar todo dia, de hora em hora:
 
-`00 * * * * /usr/bin/python3 /caminho/completo/para/app.py`
-
+```
+00 * * * * /usr/bin/python3 /caminho/completo/para/app.py`
+```
