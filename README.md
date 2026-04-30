@@ -22,11 +22,11 @@ As categorias atuais são:
 ## Executável e Automação
 ## 🪟 Windows: 
 Para facilitar o uso e economizar recursos do sistema, este projeto pode ser convertido em um
-executável (.exe) utilizando o PyInstaller e, posteriormente, agendado via Task Scheduler/Agendador de tarefas
+executável (.exe) utilizando o PyInstaller e, posteriormente, agendado via Task Scheduler/Agendador de Tarefas.
 
 #### Como gerar o executável:
 1. Instale o PyInstaller: `python -m pip install pyinstaller`
-2. Gere o arquivo: `pyinstaller --onefile --noconsole organizador.py`
+2. Gere o arquivo: `pyinstaller --onefile --noconsole app.py`
 
 O arquivo final estará na pasta dist. O uso da flag --noconsole permite que o script rode de
 forma invisível, o que é ideal para integração no dia a dia.
@@ -40,5 +40,5 @@ No Linux, a automação é feita de forma nativa utilizando o Cron.
 
 Exemplo para rodar todo dia, de hora em hora:
 
-`00 * * * * /usr/bin/python3 /caminho/completo/para/organizador.py`
+`00 * * * * /usr/bin/python3 /caminho/completo/para/app.py`
 
