@@ -29,7 +29,7 @@ python -m pip install pyinstaller
 ```
 3. Generate the file:
 ```
-pyinstaller --onefile --noconsole app.py
+python -m PyInstaller --onefile --noconsole app.py
 ```
 
 The final file will be located in the `dist` folder. Using the `--noconsole` flag allows the script to run invisibly, which is ideal for seamless daily integration.
